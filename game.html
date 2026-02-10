@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prove Your Worth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="game-page">
+  <main class="game-shell">
+    <div class="game-container">
+      <canvas id="gameCanvas" tabindex="0"></canvas>
+
+      <div class="game-hud" aria-label="Game HUD">
+        <div class="hud-hearts" aria-label="Lives">
+          <span class="heart-icon">❤</span>
+          <span class="heart-icon">❤</span>
+          <span class="heart-icon">❤</span>
+        </div>
+        <div class="hud-score">
+          <span>Score: <span id="scoreEl">0</span></span>
+          <span>High Score: <span id="highScoreEl">0</span></span>
+        </div>
+      </div>
+
+      <div id="startOverlay" class="game-overlay">
+        <h1>Choose Difficulty</h1>
+        <div class="overlay-actions">
+          <button id="easyBtn" type="button">Easy Peasy</button>
+          <button id="mediumBtn" type="button">Medium Madness</button>
+          <button id="hardBtn" type="button">Hard</button>
+        </div>
+      </div>
+    </div>
+    <h3 class = "wasdHint">Use WASD to move and spacebar to jump!</h3>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

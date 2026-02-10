@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div id="header-region" class="header-region">
+      <header id="header-container" class="header-container">
+        <h1>Will you be my Valentine?</h1>
+      </header>
+    </div>
+
+    <div class="content-region">
+      <main>
+        <div id="buttons-container" class="buttons-container" aria-label="Valentine response options">
+          <button id="yes-button" class="choice-button yes-button" type="button">Yes</button>
+          <button id="no-button" class="choice-button no-button" type="button">No</button>
+        </div>
+
+        <section id="imageZone" class="image-zone" aria-label="Cute cat collage">
+          <img id="heartCatImage" class="safe-image heartCatImage" src="images/heartCat.jpg" alt="A cute cat looking at the camera with big eyes">
+          <img id="bobaCatImage" class="safe-image bobaCatImage" src="images/bobaCat.jpg" alt="A cute cat looking at the camera with big eyes">
+          <img id="phoneCatImage" class="safe-image phoneCatImage" src="images/phoneCat.jpg" alt="A cute cat looking at the camera with big eyes">
+          <img id="letterCatImage" class="safe-image letterCatImage" src="images/letterCat.jpg" alt="A cute cat looking at the camera with big eyes">
+        </section>
+
+        <div
+          id="progressBar"
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Affection meter"
+          aria-valuemin="0"
+          aria-valuemax="18"
+          aria-valuenow="0"
+        >
+          <div class="progress-segment" data-seg="1"></div>
+          <div class="progress-segment" data-seg="2"></div>
+          <div class="progress-segment" data-seg="3"></div>
+          <div class="progress-segment" data-seg="4"></div>
+          <div class="progress-segment" data-seg="5"></div>
+          <div class="progress-segment" data-seg="6"></div>
+        </div>
+
+        <a href="game.html"><button id="proveBtn" class="prove-btn" type="button" hidden></a>
+          PROVE YOUR WORTH
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

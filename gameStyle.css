@@ -1,0 +1,176 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  color: #4f2335;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.5), transparent 42%),
+    linear-gradient(160deg, #ffe9f2 0%, #ffdce9 55%, #ffcfe1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; /* or overflow-x: clip; */
+}
+
+.game-shell {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.game-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;      /* IMPORTANT: clips overlays/canvas if they mis-size */
+  border-radius: 1rem;
+}
+
+.game-heading {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 10px 24px rgba(140, 62, 96, 0.2);
+}
+
+.game-heading h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.2vw, 2.2rem);
+}
+
+.hud-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 18px rgba(140, 62, 96, 0.16);
+  font-weight: 700;
+}
+
+.hud-row p {
+  margin: 0;
+}
+
+.game-hud {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  pointer-events: none; /* so HUD doesn’t block canvas clicks */
+}
+
+.hud-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 0;              /* IMPORTANT for flex overflow issues */
+  overflow-wrap: anywhere;   /* prevents pushing layout wider */
+}
+
+.canvas-wrap {
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff7fb;
+  box-shadow: 0 14px 28px rgba(128, 48, 84, 0.22);
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(180deg, #ffe4f0 0%, #ffd2e5 100%);
+}
+
+.instructions {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #5f2b40;
+}
+
+
+.win-overlay {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.9rem;
+  text-align: center;
+  background: rgba(77, 29, 50, 0.68);
+  color: #fff;
+  padding: 1rem;
+}
+
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.9rem;
+  text-align: center;
+  background: rgba(77, 29, 50, 0.68);
+  color: #fff;
+  padding: 1rem;
+}
+
+.win-overlay h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  position: absolute;
+}
+
+.overlay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.overlay-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.72rem 1.2rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff7aac 0%, #f1487a 58%, #dd2f5f 100%);
+  color: #fff;
+}
+
+.overlay-actions button:hover {
+  filter: brightness(1.05);
+}
+
+.wasdHint {
+    justify-content: center;
+}
